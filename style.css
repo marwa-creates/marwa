@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif;
+    background-color: #000; /* Black background */
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.buttons {
+    margin: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: #fff;
+}
+
+#yesButton {
+    background-color: #f4a3a6; /* Pale red */
+}
+
+#noButton {
+    background-color: #f4a3a6; /* Pale red */
+}
+
+button:hover {
+    background-color: #e89c9e;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    font-size: 2em;
+    color: #fff;
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+}
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/heart.png') repeat;
+    z-index: 0;
+    animation: floatHearts 10s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: url('https://cdn.pixabay.com/photo/2017/07/21/21/19/fireworks-2525851_960_720.png') repeat;
+    background-size: cover;
+    animation: fireworksAnimation 3s ease-out;
+    opacity: 0;
+}
+
+@keyframes fireworksAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.flowers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: url('https://www.transparenttextures.com/patterns/pat.jpg') repeat;
+    background-size: 200px 200px; /* Adjust size for the flowers */
+    animation: moveFlowers 20s linear infinite;
+}
+
+@keyframes moveFlowers {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
